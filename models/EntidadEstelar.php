@@ -14,6 +14,7 @@
     $this -> nombre = $nombre;
     $this -> planetaOG = $planetaOG;
     $this -> estabilidad = $estabilidad;
+
     }
 
     function getId(){
@@ -42,10 +43,7 @@
 
     function setEstabilidad($estabilidad){
         $this -> estabilidad = $estabilidad;
-    }
-
-    
-    
+    }    
 }
 
 ?>

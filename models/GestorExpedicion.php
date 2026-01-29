@@ -3,8 +3,7 @@
 class GestorExpedicion implements iGestor
 {
 
-    function __construct()
-    {
+    function __construct(){
         if (!isset($_SESSION['hallazgos'])) {
             $_SESSION['hallazgos'] = [];
         }

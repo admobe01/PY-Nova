@@ -4,9 +4,8 @@ class Artefacto extends EntidadEstelar implements iInteractuable {
 
     protected $antiguedad;
 
-    function __construct($nombre, $planetaOG, $estabilidad, $antiguedad,){
+    function __construct($nombre, $planetaOG, $estabilidad, $antiguedad){
         parent::__construct( $nombre ,$planetaOG, $estabilidad);
-        
         $this -> antiguedad = $antiguedad;
     }
 

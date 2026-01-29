@@ -17,11 +17,15 @@
             <option value="Min">Mineral raro💎
             <option>
         </select>
-        <label for="name">Elige el nombre</label><br>
-            <input type="text" max="20" required><br>
-        <label for="PlanetaOG">Planeta de origen</label><br>
-            <input type="name" max="20" required>
-        <label for=""
+        <br><br> 
+        <label for="name">Elige el nombre</label>
+            <input type="text" max="20" name="nombre"required><br><br>
+        <label for="PlanetaOG">Planeta de origen</label>
+            <input type="name" max="20" name="PlanetaOG" required><br><br>
+        <label for="estabilidad">Indique el nivel de peligrosidad del hallazgo</label>
+            <input type="number" step="1" min="0" max="10" name="PlanetaOG" required><br><br><br>
+        <label for="esp">Atributo especial</label>
+            <input type="name" max="20" name="Atr" required><br><br>
 
 
         <button type="submit">Guardar</button>

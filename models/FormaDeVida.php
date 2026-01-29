@@ -11,7 +11,7 @@ class FormaDeVida extends EntidadEstelar implements iInteractuable{
 
 
     function reaccionar(){
-        return "La vida exclamo un: Yo en la calle te mato. Algo incomprensible ";
+        return "La vida exclamo un: 'Yo en la calle te mato'. Algo incomprensible ";
     }
 
     function getDieta(){
