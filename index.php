@@ -1,7 +1,8 @@
 <?php
 require_once 'autoload.php';
 session_start();
-$controller = new AsignaturaController();
+$controllerFuera = new GestorExpedicion();
+$controller = new controller($controllerFuera);
 
 $accion = $_GET['accion'] ?? 'index';
 
@@ -18,5 +19,3 @@ switch ($accion) {
     default:
         $controller->index();
 }
-
-?>  

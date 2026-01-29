@@ -1,10 +1,11 @@
 <?php
 
 
-interface iGestor {
+interface iGestor{
+
 function obtenerTodos();
-function guardar();
-function eliminar();
+function guardar(EntidadEstelar $entidad);
+function eliminar($id);
 
 }
 

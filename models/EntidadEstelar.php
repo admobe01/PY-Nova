@@ -16,6 +16,10 @@
     $this -> estabilidad = $estabilidad;
     }
 
+    function getId(){
+        return $this -> id;
+    }
+
     function getNombre(){
         return $this -> nombre;
     }
@@ -40,6 +44,7 @@
         $this -> estabilidad = $estabilidad;
     }
 
+    
     
 }
 
