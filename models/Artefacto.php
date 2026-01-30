@@ -11,14 +11,14 @@ class Artefacto extends EntidadEstelar implements iInteractuable {
 
     
     function reaccionar(){
-        return "Al golpearlo contra el suelo grita pero no contra la pared";
+        return "Al golpearlo contra el suelo grita, pero no contra la pared";
     }
 
-    function getAntiguedad(){
+    function getAtributo(){
         return $this->antiguedad;
     }
 
-    function setAntiguedad($antiguedad){
+    function setAtributo($antiguedad){
         $this -> antiguedad = $antiguedad;
     }
 

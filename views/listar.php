@@ -34,14 +34,7 @@
                     <td><?= $h->getNombre() ?></td>
                     <td><?= $h->getPlanetaOG() ?></td>
                     <td><?= $h->getEstabilidad() ?>/10</td>
-                    <td>
-                        <?php
-                        // Mostramos el atributo según el tipo de objeto
-                        if ($h instanceof FormaDeVida) echo "Dieta: " . $h->getDieta();
-                        if ($h instanceof MineralRaro) echo "Dureza: " . $h->getDureza();
-                        if ($h instanceof Artefacto) echo "Antigüedad: " . $h->getAntiguedad();
-                        ?>
-                    </td>
+                    <td><?= $h->getAtributo() ?></td>
                     <td><em><?= $h->reaccionar() ?></em></td>
                     <td>
                         <a href="index.php?accion=editar&id=<?= $h->getId() ?>">Editar</a>

@@ -1,6 +1,6 @@
 <?php
 
 interface iInteractuable {
-    function reaccionar()
+    function reaccionar();
 }
 ?>

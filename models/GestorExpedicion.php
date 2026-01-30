@@ -26,8 +26,8 @@ class GestorExpedicion implements iGestor
             if ($p->getId() == $codigo) {
                 unset($_SESSION['hallazgos'][$i]);
                 $_SESSION['hallazgos'] = array_values($_SESSION['hallazgos']);
-                return true;
             }
+            return true;
         }
         return false;
     }
@@ -47,19 +47,21 @@ class GestorExpedicion implements iGestor
             if ($p->getId() == $codigo) {
                 return $p;
             }
-            return null;
         }
-
-        function editar($codigo, $nombre, $planetaOG, $estabilidad, $antiguedad = "", $dureza = "", $dieta = "")
+         return null;
+    }
+        function editar($codigo, $nombre, $planetaOG, $estabilidad, $atr)
         {
             foreach ($_SESSION['hallazgos'] as $p) {
                 if ($p->getId() == $codigo) {
                     $p->setNombre($nombre);
                     $p->setPlanetaOG($planetaOG);
                     $p->setEstabilidad($estabilidad);
-                    //aqui faltan las variables especiales
+                    $p->setAtributo($atr);
+
+                    return true;
                 }
             }
+            return false;
         }
     }
-}
