@@ -24,7 +24,7 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($_SESSION['hallazgos'] as $h): ?>
+            <?php foreach ($estelar as $h): ?>
                 <?php
                 // Requisito: Fondo rojo si estabilidad < 3 
                 $estiloAlerta = ($h->getEstabilidad() < 3) ? 'style="background-color: #e00f0f;"' : '';
@@ -45,6 +45,18 @@
             <?php endforeach; ?>
         </tbody>
     </table>
+    </table id="paginador"> <div style="margin-top: 20px; text-align: center;">
+        <p>Página <?= $paginaActual ?> de <?= $totalPaginas ?></p>
+        
+        <?php if ($paginaActual > 1): ?>
+            <a href="index.php?accion=index&p=<?= $paginaActual - 1 ?>"> « Anterior </a>
+        <?php endif; ?>
+        
+        <?php if ($paginaActual < $totalPaginas): ?>
+            <a href="index.php?accion=index&p=<?= $paginaActual + 1 ?>"> Siguiente » </a>
+        <?php endif; ?>
+    </div>
+    
 </body>
 
 </html>

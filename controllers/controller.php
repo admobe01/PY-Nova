@@ -11,9 +11,28 @@ class Controller
         $this->gestorControlador = $gestor;
     }
 
-    function index()
+function index()
     {
-        $estelar = $this->gestorControlador->ObtenerTodos();
+        // 1. Cargamos las funciones de ayuda
+        require_once 'helpers/funciones.php';
+
+        // 2. Traemos TODOS los hallazgos del gestor
+        $todos = $this->gestorControlador->ObtenerTodos();
+
+        // 3. Configuración de la paginación
+        $porPagina = 5; // Lo que pide el PDF
+        $paginaActual = obtenerPaginaActual();
+        $totalPaginas = obtenerTotalPaginas($todos, $porPagina);
+
+        // 4. Matemáticas para cortar el array:
+        // Si estamos en pág 1: (1-1)*5 = 0. Empezamos en el 0.
+        // Si estamos en pág 2: (2-1)*5 = 5. Empezamos en el 5.
+        $inicio = ($paginaActual - 1) * $porPagina;
+
+        // 5. CORTAMOS el array para enviar a la vista SOLO los 5 que tocan
+        // array_slice(array, donde_empieza, cuantos_coge)
+        $estelar = array_slice($todos, $inicio, $porPagina);
+
         include "views/listar.php";
     }
 
