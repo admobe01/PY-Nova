@@ -18,9 +18,11 @@ class Controller
     }
 
     function crear()
-    {
+    {   
+
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
+        $nuevo = null;
             $nom = $_POST['nombre'];
             $plan = $_POST['planetaOG'];
             $est = $_POST['estabilidad'];
@@ -68,7 +70,9 @@ function editar() {
 
         if ($hallazgo) {
             include "views/editar.php";
-        }
+        }else{
+        header("Location: index.php");
+    }
     }
 }
 

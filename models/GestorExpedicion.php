@@ -26,8 +26,9 @@ class GestorExpedicion implements iGestor
             if ($p->getId() == $codigo) {
                 unset($_SESSION['hallazgos'][$i]);
                 $_SESSION['hallazgos'] = array_values($_SESSION['hallazgos']);
+                 return true;
             }
-            return true;
+           
         }
         return false;
     }
@@ -48,7 +49,7 @@ class GestorExpedicion implements iGestor
                 return $p;
             }
         }
-         return null;
+         return false;
     }
         function editar($codigo, $nombre, $planetaOG, $estabilidad, $atr)
         {

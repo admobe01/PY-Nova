@@ -28,7 +28,7 @@ class FormaDeVida extends EntidadEstelar implements iInteractuable{
     }
 
     function setAtributo($dieta){
-        $this -> dieta;
+        $this -> dieta = $dieta;
     }
 }
 ?>
