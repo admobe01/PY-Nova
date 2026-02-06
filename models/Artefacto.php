@@ -28,6 +28,10 @@ function reaccionar() {
         return $this->antiguedad;
     }
 
+       function getClase(){
+        return "Artefacto";
+    }
+
     function setAtributo($antiguedad){
         $this -> antiguedad = $antiguedad;
     }

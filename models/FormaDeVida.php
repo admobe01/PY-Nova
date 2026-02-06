@@ -23,6 +23,10 @@ class FormaDeVida extends EntidadEstelar implements iInteractuable{
     }
     }
 
+    function getClase(){
+        return "Ser viviente";
+    }
+
     function getAtributo(){
         return $this->dieta;
     }

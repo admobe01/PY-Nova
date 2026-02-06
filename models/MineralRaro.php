@@ -27,6 +27,10 @@ class MineralRaro extends EntidadEstelar implements iInteractuable
     }
 }
 
+       function getClase(){
+        return "Mineral raro";
+    }
+
     function getAtributo(){
         return $this->dureza;
     }

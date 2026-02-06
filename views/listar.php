@@ -20,6 +20,7 @@
                 <th>Estabilidad</th>
                 <th>Atributo Especial</th>
                 <th>Reacción</th>
+                <th>Clase estelar</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -36,6 +37,7 @@
                     <td><?= $h->getEstabilidad() ?>/10</td>
                     <td><?= $h->getAtributo() ?></td>
                     <td><em><?= $h->reaccionar() ?></em></td>
+                    <td><?= $h->getClase() ?></td>
                     <td>
                         <a href="index.php?accion=editar&id=<?= $h->getId() ?>">Editar</a>
                         |
@@ -58,5 +60,4 @@
     </div>
     
 </body>
-
 </html>
